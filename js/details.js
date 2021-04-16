@@ -9,10 +9,11 @@ const id = params.get("id");
 console.log("id");
 
 const url = "http://matshel.dev/rainydays/wp-json/wc/store/products/" + id;
+const corsEnabledUrl = "https://noroffcors.herokuapp.com/" + url;
 
 async function getProducts() {
     try {
-        const response = await fetch(url);
+        const response = await fetch(corsEnabledUrl);
         const getResults = await response.json();
         detailContainer.innerHTML = "";
         createHTML(getResults);

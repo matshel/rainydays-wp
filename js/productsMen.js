@@ -1,9 +1,10 @@
 const url = "http://matshel.dev/rainydays/wp-json/wc/store/products";
+const corsEnabledUrl = "https://noroffcors.herokuapp.com/" + url;
 const productsContainer = document.querySelector(".featured-product-item");
 
 async function getProducts() {
     try {
-        const response = await fetch(url);
+        const response = await fetch(corsEnabledUrl);
         const getResults = await response.json();
         productsContainer.innerHTML = "";
         createHTML(getResults);
