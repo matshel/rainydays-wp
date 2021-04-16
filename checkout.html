@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Comfortable jackets on your next adventure. Any weather, any season. Checkout process..." />
+        <meta
+            name="keywords"
+            content="Jacket, Jackets, Hiking, All season, Active, Comfortable, Quality, Durability, Outdoors, Trail, Trip"
+        />
+        <meta name="author" content="Mats Helgesen" />
+        <script src="https://kit.fontawesome.com/6ffdc149cc.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.typekit.net/xtx6yne.css" />
+        <link rel="stylesheet" href="/styles/styles.css" />
+        <link rel="stylesheet" href="/styles/checkout.css" />
+        <title>Rainydays Checkout</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="statementbar">
+                <p class="child1"><i class="fas fa-check-circle"></i>FREE returns</p>
+                <p class="child2"><i class="fas fa-check-circle"></i>FREE delivery on orders over $100</p>
+                <p class="child3"><i class="fas fa-check-circle"></i>45 day money back guarantee</p>
+                <p class="child4"><i class="fas fa-check-circle"></i>Satisfaction guarantee</p>
+            </div>
+            <div id="logo-bar">
+                <div>
+                    <a href="index.html" class="logo"><img src="/images/Rainydays_logo.png" alt="Logo Rainydays" /></a>
+                    <div class="cart-btn">
+                        <button type="button" id="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count-info">1</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                <ul class="menu">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="womens.html">women's</a></li>
+                    <li><a href="mens.html">men's</a></li>
+                    <li><a href="all.html">all</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+            <div class="orangebar"></div>
+        </header>
+        <main>
+            <div class="herobar"><h1>Checkout</h1></div>
+            <section class="form_section">
+                <div class="container-form">
+                    <form id="checkoutForm">
+                        <h2>Checkout</h2>
+                        <div>
+                            <label>
+                                <!-- First name -->
+                                <input name="fullName" id="fullName" required placeholder="Full Name" />
+                            </label>
+                            <div class="form-error" id="fullNameError">Please enter your full name</div>
+                        </div>
+                        <div>
+                            <label>
+                                <!-- Email -->
+                                <input name="email" id="email" required placeholder="Email" />
+                            </label>
+                            <div class="form-error" id="emailError">Please enter a valid email address</div>
+                        </div>
+                        <div>
+                            <label>
+                                <!-- address -->
+                                <input name="address" id="address" required placeholder="Address" />
+                            </label>
+                            <div class="form-error" id="addressError">Please enter your address minimum 10 characters</div>
+                        </div>
+                        <div>
+                            <label>
+                                <!-- ccnumber -->
+                                <input name="ccnumber" id="ccnumber" required placeholder="0000111122223333" />
+                            </label>
+                            <div class="form-error" id="ccnumberError">Please enter your credit card number</div>
+                        </div>
+                        <div>
+                            <label>
+                                <!-- cardholder -->
+                                <input name="cardholder" id="cardholder" required placeholder="Card Holder" />
+                            </label>
+                            <div class="form-error" id="cardholderError">Please enter cardholder full name</div>
+                        </div>
+                        <div class="date-cvc">
+                            <div>
+                                <label>
+                                    <!-- date -->
+                                    <input name="date" id="date" required placeholder="0121" />
+                                </label>
+                                <div class="form-error" id="dateError">Please enter expiry date</div>
+                            </div>
+                            <div>
+                                <label>
+                                    <!-- cvccode -->
+                                    <input name="cvccode" id="cvccode" required placeholder="123" />
+                                </label>
+                                <div class="form-error" id="cvcCodeError">Please enter CVC</div>
+                            </div>
+                        </div>
+                        <button class="btn-checkout-form">Purchase</button>
+                    </form>
+                </div>
+            </section>
+            <div class="social-info">
+                <h2>Follow us on</h2>
+                <a href="https://www.instagram.com"><i class="fab fa-instagram-square fa-5x"></i></a>
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-square fa-5x"></i></a>
+            </div>
+            <div class="instagram">
+                <a href="https://www.instagram.com"
+                    ><img src="/images/instagram_1.jpg" alt="Picture of a man zipping up a Rainydays jacket"
+                /></a>
+                <a href="https://www.instagram.com"
+                    ><img src="/images/instagram_2.jpg" alt="Picture of a woman in a mountain canyon wearing a Rainydays jacket"
+                /></a>
+                <a href="https://www.instagram.com"
+                    ><img src="/images/instagram_3.jpg" alt="Picture of a woman in a snowy forest wearing a Rainydays jacket"
+                /></a>
+            </div>
+            <div class="overlay-container">
+                <div class="close-button">
+                    <button>X</button>
+                </div>
+                <ul class="cart-products">
+                    <li>Your Cart</li>
+                    <li><img src="images/Rainydays-Mens-All-Weather-Jacket.jpg" alt="Rainydays All Weather Jacket Men's" /></li>
+                    <ul class="cart-overlay-info">
+                        <li><i class="fas fa-minus-square"></i>1<i class="fas fa-plus-square"></i></li>
+                        <li>Rainydays</li>
+                        <li>All Weather Jacket</li>
+                        <li>Price: $129</li>
+                        <li class="cart-total-price">Total: $129</li>
+                    </ul>
+                    <button>Purchase</button>
+                </ul>
+            </div>
+        </main>
+        <footer id="footer"><i class="fa fa-copyright" aria-hidden="false"></i>Copyright Rainydays 2020</footer>
+        <script src="js/overlay.js"></script>
+        <script src="js/checkout.js"></script>
+    </body>
+</html>
