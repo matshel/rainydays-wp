@@ -2,112 +2,98 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Comfortable jackets on your next adventure. Any weather, any season. Selected jacket." />
-        <meta
-            name="keywords"
-            content="Jacket, Jackets, Hiking, All season, Active, Comfortable, Quality, Durability, Outdoors, Trail, Trip"
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+            integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+            crossorigin="anonymous"
         />
-        <meta name="author" content="Mats Helgesen" />
-        <script src="https://kit.fontawesome.com/6ffdc149cc.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://use.typekit.net/xtx6yne.css" />
-        <link rel="stylesheet" href="/styles/styles.css" />
-        <link rel="stylesheet" href="styles/details.css" />
-        <title>Rainydays Jacket Details</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/details.css" />
+        <title>Rainydays Home</title>
     </head>
     <body>
-        <header class="header">
-            <div class="statementbar">
-                <p class="child1"><i class="fas fa-check-circle"></i>FREE returns</p>
-                <p class="child2"><i class="fas fa-check-circle"></i>FREE delivery on orders over $100</p>
-                <p class="child3"><i class="fas fa-check-circle"></i>45 day money back guarantee</p>
-                <p class="child4"><i class="fas fa-check-circle"></i>Satisfaction guarantee</p>
-            </div>
-            <div id="logo-bar">
-                <div>
-                    <a href="index.html" class="logo"><img src="/images/Rainydays_logo.png" alt="Logo Rainydays" /></a>
-                    <div class="cart-btn">
-                        <button type="button" id="cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span class="cart-count-info">0</span>
-                        </button>
-                    </div>
-                </div>
+        <header>
+            <div class="statement-bar">
+                <p class="child1"><i class="fas fa-check-circle fa-lg"></i>FREE delivery on orders over $100</p>
+                <p class="child2"><i class="fas fa-check-circle fa-lg"></i>FREE returns</p>
+                <p class="child3"><i class="fas fa-check-circle fa-lg"></i>45 day money back guarantee</p>
+                <p class="child4"><i class="fas fa-check-circle fa-lg"></i>Satisfaction guarantee</p>
             </div>
             <nav>
-                <input class="menu-btn" type="checkbox" id="menu-btn" />
-                <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-                <ul class="menu">
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="womens.html">women's</a></li>
-                    <li><a href="mens.html">men's</a></li>
-                    <li><a href="all.html">all</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                </ul>
+                <div class="nav-container">
+                    <div class="logo">
+                        <a href="index.html" aria-label="Logo go to home page">Rainydays</a>
+                        <img src="images/bx-droplet.svg" alt="droplet" />
+                    </div>
+                    <div class="space"></div>
+                    <ul class="nav-links">
+                        <li><a href="index.html" aria-label="Go to home page">Home</a></li>
+                        <li><a href="women.html" aria-label="Go to blog women page">Women</a></li>
+                        <li><a href="men.html" aria-label="Go to blog men page">Men</a></li>
+                        <li><a href="all.html" aria-label="Go to blog all page">All</a></li>
+                        <li><a href="about.html" aria-label="Go to about page">About</a></li>
+                        <li><a href="contact.html" aria-label="Go to contact page">Contact</a></li>
+                    </ul>
+                    <div class="cart"><img src="images/bx-shopping-bag.svg" alt="" /></div>
+                    <span class="cart-number">0</span>
+                    <div class="burger">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </div>
             </nav>
-            <div class="orangebar"></div>
+            <!-- navigation end -->
         </header>
-        <main>
-            <div class="herobar"><h1>Jackets / Details</h1></div>
-            <div class="featured-products">
-                <div class="featured-product-item">
-                    <div class="loader"></div>
-                </div>
-                <div class="featured-product-item">
-                    <section id="select-size">
-                        <h3>Select Size</h3>
-                        <div class="radio-size">
-                            <input type="radio" id="radioS" name="radioSize" value="S" checked />
-                            <label for="radioS">S</label>
-                            <input type="radio" id="radioM" name="radioSize" value="M" />
-                            <label for="radioM">M</label>
-                            <input type="radio" id="radioL" name="radioSize" value="L" />
-                            <label for="radioL">L</label>
-                        </div>
-                    </section>
-                    <section id="select-color">
-                        <h3>Select Color</h3>
-                        <div class="radio-color">
-                            <input type="radio" id="radioBlue" name="radiocolor" value="Blue" checked />
-                            <label for="radioBlue">Blue</label>
-                            <input type="radio" id="radioBlack" name="radiocolor" value="Black" />
-                            <label for="radioBlack">Black</label>
-                            <input type="radio" id="radioYellow" name="radiocolor" value="Yellow" />
-                            <label for="radioYellow">Yellow</label>
-                        </div>
-                        <a href="jacket-added.html" class="button">Add to cart</a>
-                    </section>
-                </div>
+        <!-- navigation -->
+        <div class="orange-bar"></div>
+        <div class="hero-section">
+            <h1>Jackets / Details</h1>
+        </div>
+        <div class="jacket-section">
+            <div class="jacket-container">
+                <div class="loader"></div>
             </div>
-            <div class="social-info">
-                <h2>Follow us on</h2>
-                <a href="https://www.instagram.com"><i class="fab fa-instagram-square fa-5x"></i></a>
-                <a href="https://www.facebook.com"><i class="fab fa-facebook-square fa-5x"></i></a>
+            <div class="select">
+                <section id="select-size">
+                    <h3>Select Size</h3>
+                    <div class="radio-size">
+                        <input type="radio" id="radioS" name="radioSize" value="S" checked />
+                        <label for="radioS">S</label>
+                        <input type="radio" id="radioM" name="radioSize" value="M" />
+                        <label for="radioM">M</label>
+                        <input type="radio" id="radioL" name="radioSize" value="L" />
+                        <label for="radioL">L</label>
+                    </div>
+                </section>
+                <section id="select-color">
+                    <h3>Select Color</h3>
+                    <div class="radio-color">
+                        <input type="radio" id="radioBlue" name="radiocolor" value="Blue" checked />
+                        <label for="radioBlue">Blue</label>
+                        <input type="radio" id="radioBlack" name="radiocolor" value="Black" />
+                        <label for="radioBlack">Black</label>
+                        <input type="radio" id="radioYellow" name="radiocolor" value="Yellow" />
+                        <label for="radioYellow">Yellow</label>
+                    </div>
+                    <!-- <a href="jacket-added.html" class="button">Add to cart</a> -->
+                    <button>Add to cart</button>
+                </section>
             </div>
-            <div class="instagram">
-                <a href="https://www.instagram.com"
-                    ><img src="/images/instagram_1.jpg" alt="Picture of a man zipping up a Rainydays jacket"
-                /></a>
-                <a href="https://www.instagram.com"
-                    ><img src="/images/instagram_2.jpg" alt="Picture of a woman in a mountain canyon wearing a Rainydays jacket"
-                /></a>
-                <a href="https://www.instagram.com"
-                    ><img src="/images/instagram_3.jpg" alt="Picture of a woman in a snowy forest wearing a Rainydays jacket"
-                /></a>
+        </div>
+        <!-- footer section -->
+        <footer>
+            <div class="footer-container">
+                <i class="fa fa-copyright" aria-hidden="true"> 2021 Rainydays</i>
             </div>
-            <div class="overlay-container">
-                <div class="close-button">
-                    <button>X</button>
-                </div>
-                <ul class="cart-products">
-                    <li>Your Cart</li>
-                    <li>Your cart is empty!</li>
-                </ul>
-            </div>
-        </main>
-        <footer id="footer"><i class="fa fa-copyright" aria-hidden="false"></i>Copyright Rainydays 2020</footer>
+        </footer>
+        <!-- footer section end -->
+
+        <script src="js/navSlider.js"></script>
         <script src="js/details.js"></script>
-        <script src="js/overlay.js"></script>
+        <script src="js/errorMessage.js"></script>
     </body>
 </html>

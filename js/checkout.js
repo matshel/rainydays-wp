@@ -31,13 +31,13 @@ function validateForm(event) {
         emailError.style.display = "block";
     }
 
-    if (checkLength(address.value, 25) === true) {
+    if (checkLength(address.value, 24) === true) {
         addressError.style.display = "none";
     } else {
         addressError.style.display = "block";
     }
 
-    if (checkLength(ccnumber.value, 10) === true) {
+    if (checkLength(ccnumber.value, 15) === true) {
         ccnumberError.style.display = "none";
     } else {
         ccnumberError.style.display = "block";
@@ -61,8 +61,9 @@ function validateForm(event) {
         cvcCodeError.style.display = "block";
     }
 
-    if (validateName(fullName.value) === true && validateEmail(email.value) === true && checkLength(address.value, 25) && checkLength(ccnumber.value, 10) === true && validateName(cardholder.value) === true && checkLengthEqual(date.value, 4) && checkLengthEqual(cvccode.value, 3)) {
-        goTo();
+    if (validateName(fullName.value, 4) === true && validateEmail(email.value) === true && checkLength(address.value, 25) && checkLength(ccnumber.value, 15) === true && validateName(cardholder.value) === true && checkLengthEqual(date.value, 4) && checkLengthEqual(cvccode.value, 3)) {
+        form.reset(); // resets form
+        goTo(); 
 }
 }
 
@@ -70,13 +71,7 @@ function validateForm(event) {
 form.addEventListener("submit", validateForm); 
 
 
-function checkLength(value, len) { 
-    if (value.trim().length > len) {
-        return true;
-    } else {
-        return false;
-    }
-}
+// function that checks exact length
 function checkLengthEqual(value, len) { 
     if (value.trim().length === len) {
         return true;
@@ -85,17 +80,26 @@ function checkLengthEqual(value, len) {
     }
 }
 
-
+// function that validates email address
 function validateEmail(email) {
     const regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const patternMatches = regEx.test(email);
     return patternMatches;
 }
-
+// function that validates full name
 function validateName(fullName) {
     const regEx = /^[a-z\u00C0-\u02AB'´`]{2,}\.?\s([a-z\u00C0-\u02AB'´`]{2,}\.?\s?)+$/i;
     const patternMatches = regEx.test(fullName);
     return patternMatches;
+}
+
+// this function checks if the length is meeting the required length set by len
+function checkLength(value, len) { 
+    if (value.trim().length > len) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 

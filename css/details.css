@@ -1,0 +1,138 @@
+/* .form-check {
+    display: inline-flex;
+} */
+
+.hero-section {
+    background-image: url("/images/banner_men.jpg");
+}
+
+/* hero section */
+.hero-section {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* hero section end */
+
+/* jacket section */
+.jacket-section {
+    display: flex;
+    flex-direction: column;
+}
+.products {
+    height: 650px;
+}
+
+.products h2 {
+    margin-top: 20px;
+}
+
+.products p {
+    margin: 5px 0;
+}
+/* jacket section end */
+
+/* radio buttons for size selection */
+.radio-size input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+.radio-size label {
+    display: inline-block;
+    background-color: #fff;
+    padding: 10px 20px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 1px solid #0a3641;
+    border-radius: 5px;
+}
+.radio-size input[type="radio"]:checked + label {
+    background-color: orange;
+    border-color: #dfd;
+}
+.radio-size input[type="radio"]:focus + label {
+    border: 1px solid #0a3641;
+}
+.radio-size label:hover {
+    background-color: rgba(10, 54, 65, 0.33);
+}
+/* radio buttons for size selection end */
+
+/* radio buttons for color selection */
+.radio-color input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+.radio-color label {
+    display: inline-block;
+    background-color: white;
+    padding: 10px 20px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 1px solid #0a3641;
+    border-radius: 5px;
+}
+.radio-color input[type="radio"]:checked + label {
+    background-color: orange;
+    border-color: #dfd;
+}
+.radio-color input[type="radio"]:focus + label {
+    border: 1px solid #0a3641;
+}
+.radio-color label:hover {
+    background-color: rgba(10, 54, 65, 0.33);
+}
+
+#select-size,
+#select-color {
+    text-align: left;
+    margin: 7px;
+}
+
+#select-color {
+    margin-bottom: 30px;
+}
+
+#form {
+    margin: 7px;
+    padding: 20px 0;
+    text-align: left;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #0a3641;
+    color: white;
+    font-weight: 400;
+    width: 300px;
+    padding: 10px 70px;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+}
+
+.circle {
+    padding: 10px;
+    background: orange;
+}
+
+button:hover {
+    background: orange;
+    color: black;
+}
+
+@media screen and (min-width: 1000px) {
+    .jacket-section {
+        flex-direction: row;
+    }
+}

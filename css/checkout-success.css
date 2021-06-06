@@ -1,0 +1,61 @@
+.hero-section {
+    background-image: url("/images/banner_contact_us.jpg");
+}
+
+/* hero section */
+.hero-section {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-section div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 200px;
+    background: white;
+    opacity: 0.7;
+    font-weight: 500;
+}
+/* hero section end */
+
+.checkout-success-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.checkout-success-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-success-container h2 {
+    margin: 20px 0;
+}
+
+.checkout-success-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    width: 300px;
+    height: 40px;
+    background: #0a3641;
+    color: white;
+    font-weight: 400;
+    border: none;
+}
+
+.checkout-success-container a:hover {
+    background: orange;
+    color: black;
+}

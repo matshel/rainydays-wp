@@ -1,0 +1,54 @@
+.hero-section {
+    background-image: url("/images/banner_men.jpg");
+}
+
+.jacket-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* hero section */
+.hero-section {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-section div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 200px;
+    background: white;
+    opacity: 0.7;
+    font-weight: 500;
+}
+/* hero section end */
+
+.circle {
+    padding: 10px;
+    background: orange;
+}
+
+.buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 40px;
+    background: #0a3641;
+    color: white;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.buy:hover {
+    background: orange;
+    color: black;
+}

@@ -1,145 +1,73 @@
 const form = document.querySelector("#contactForm");
-const firstName = document.querySelector("#firstName");
-const firstNameError = document.querySelector("#firstNameError");
-const lastName = document.querySelector("#lastName");
-const lastNameError = document.querySelector("#lastNameError");
-const email = document.querySelector("#email");
-const emailError = document.querySelector("#emailError");
-const messageSent = document.querySelector("#messageSent");
+const contactName = document.querySelector("#contactName");
+const contactNameError = document.querySelector("#contactNameError");
 const subject = document.querySelector("#subject");
 const subjectError = document.querySelector("#subjectError");
-const button = document.querySelector(".btn-contact-form");
+const email = document.querySelector("#email");
+const emailError = document.querySelector("#emailError");
+const contentMessage = document.querySelector("#contentMessage");
+const contentMessageError = document.querySelector("#contentMessageError");
+const sentMessage = document.querySelector("#message");
 
+function validateForm(event) {
+    event.preventDefault(); 
 
-function checkForm() {
-
-    if(firstName.value.trim().length < 2) {
-        firstNameError.style.display = "block";
-    }else {
-        firstNameError.style.display = "none";
+    if (checkLength(contactName.value, 4) === true) {
+        contactNameError.style.display = "none"; 
+    } else {
+        contactNameError.style.display = "block"; 
     }
-    if(lastName.value.trim().length < 2) {
-        lastNameError.style.display = "block";
-    }else {
-        lastNameError.style.display = "none";
+
+    if (checkLength(subject.value, 14) === true) {
+        subjectError.style.display = "none";
+    } else {
+        subjectError.style.display = "block";
     }
-    if(validateEmail(email.value) === true) {
+
+    if (validateEmail(email.value) === true) {
         emailError.style.display = "none";
     } else {
         emailError.style.display = "block";
     }
-    if(subject.value.trim().length < 1) {
-        subjectError.style.display = "block";
-    }else {
-        subjectError.style.display = "none";
-    }
-}
 
-checkForm();
-
-function checkIfButtonIsDisabled() {
-    if (checkLength(firstName.value, 2) && checkLength(lastName.value, 2) && validateEmail(email.value) && checkLength(subject.value, 1)) {
-        button.disabled = false;
+    if (checkLength(contentMessage.value, 24) === true) {
+        contentMessageError.style.display = "none";
     } else {
-        messageSent.innerHTML = "";
-        button.disabled = true;
+        contentMessageError.style.display = "block";
+    }
+
+    if (checkLength(contactName.value, 4) === true && checkLength(subject.value, 14) === true && validateEmail(email.value) === true && checkLength(contentMessage.value, 24)) {
+        submitForm(event);
+    } else {
+        sentMessage.innerHTML = ""; // resets last successful sent msg if form is submitted once more while sent msg is still showing
     }
 }
 
+// when submit is pressed run validateForm function
+form.addEventListener("submit", validateForm); 
 
-firstName.addEventListener("keyup", checkIfButtonIsDisabled);
-lastName.addEventListener("keyup", checkIfButtonIsDisabled);
-email.addEventListener("keyup", checkIfButtonIsDisabled);
-subject.addEventListener("keyup", checkIfButtonIsDisabled);
-
-
-form.addEventListener("submit", submitForm); 
-
-
+// function to run when the form is submitted
 function submitForm(event) {
     event.preventDefault();
-    messageSent.innerHTML = '<div class="message">Your message has been sent!</div>';
+    // display a message once the form has been submitted
+    sentMessage.innerHTML = '<div class="success">Your message has been sent!</div>';
+    // clear all input values
     form.reset();
 }
 
-// timeout token 
-
-let TimeoutToken = 0;
-
-window.onload = () => {
-    firstName.onkeyup = (event) => {
-
-        clearTimeout(TimeoutToken);
-
-        if (firstName.value.trim().length === 0) { 
-            firstNameError.style.display = "block"; 
-            return;
-        }
-
-        TimeoutToken = setTimeout(() => {
-            checkForm(firstName.value);
-        }, 250);
-        
-    };
-    
-    lastName.onkeyup = (event) => {
-
-        clearTimeout(TimeoutToken);
-
-        if (lastName.value.trim().length === 0) { 
-        lastNameError.style.display = "block"; 
-            return;
-        }
-
-        TimeoutToken = setTimeout(() => {
-            checkForm(lastName.value);
-        }, 250);
-        
-    };
-
-    email.onkeyup = (event) => {
-
-        clearTimeout(TimeoutToken);
-
-        if (email.value.trim().length === 0) { 
-        emailError.style.display = "block"; 
-            return;
-        }
-
-        TimeoutToken = setTimeout(() => {
-            checkForm(email.value);
-        }, 250);
-        
-    };
-
-    subject.onkeyup = (event) => {
-
-        clearTimeout(TimeoutToken);
-
-        if (subject.value.trim().length === 0) { 
-        subjectError.style.display = "block";
-            return;
-        }
-
-        TimeoutToken = setTimeout(() => {
-            checkForm(subject.value);
-        }, 250);
-        
-    };
-}
-
-
-function validateEmail(email) {
-    const regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    // need to add white-space check somehow : /^[^ ][\w\W ]*[^ ]/
-    const patternMatches = regEx.test(email);
-    return patternMatches;
-}
-
-function checkLength(value, len) {
-    if (value.trim().length >= len) {
+// this function checks if the length is meeting the required length set by len
+function checkLength(value, len) { 
+    if (value.trim().length > len) {
         return true;
     } else {
         return false;
     }
 }
+
+// this function validates email
+function validateEmail(email) {
+    const regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const patternMatches = regEx.test(email);
+    return patternMatches;
+}
+

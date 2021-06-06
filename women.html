@@ -11,7 +11,7 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/checkout-success.css" />
+        <link rel="stylesheet" href="css/women.css" />
         <title>Rainydays Home</title>
     </head>
     <body>
@@ -31,15 +31,14 @@
                     <div class="space"></div>
                     <ul class="nav-links">
                         <li><a href="index.html" aria-label="Go to home page">Home</a></li>
-                        <li><a href="women.html" aria-label="Go to blog women page">Women</a></li>
+                        <li class="this-page"><a href="women.html" aria-label="Go to blog women page">Women</a></li>
                         <li><a href="men.html" aria-label="Go to blog men page">Men</a></li>
                         <li><a href="all.html" aria-label="Go to blog all page">All</a></li>
                         <li><a href="about.html" aria-label="Go to about page">About</a></li>
                         <li><a href="contact.html" aria-label="Go to contact page">Contact</a></li>
                     </ul>
                     <div class="cart"><img src="images/bx-shopping-bag.svg" alt="" /></div>
-                    <a href="jacket-added.html" class="circle"><span class="cart-number">0</span></a>
-
+                    <span class="cart-number">0</span>
                     <div class="burger">
                         <div class="line1"></div>
                         <div class="line2"></div>
@@ -52,13 +51,11 @@
         <!-- navigation -->
         <div class="orange-bar"></div>
         <div class="hero-section">
-            <h1>Cart</h1>
+            <h1>Jackets / Women</h1>
         </div>
-        <div class="checkout-success-section">
-            <div class="checkout-success-container">
-                <h2>Order complete</h2>
-                <p>Ordernr : 007</p>
-                <a href="all.html">Continue shopping</a>
+        <div class="jacket-section">
+            <div class="jacket-container">
+                <div class="loader"></div>
             </div>
         </div>
         <!-- footer section -->
@@ -68,8 +65,9 @@
             </div>
         </footer>
         <!-- footer section end -->
+
         <script src="js/navSlider.js"></script>
+        <script src="js/productsWomen.js"></script>
         <script src="js/errorMessage.js"></script>
-        <script src="js/checkout.js"></script>
     </body>
 </html>

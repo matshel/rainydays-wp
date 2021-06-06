@@ -1,0 +1,50 @@
+.hero-section {
+    background-image: url("/images/banner_about_us.jpg");
+}
+
+.about-section {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.about-container p {
+    font-weight: 400;
+    margin: 20px 10px 20px 10px;
+    max-width: 600px;
+}
+
+.about-container h2 {
+    margin-bottom: 20px;
+}
+
+/* hero section */
+.hero-section {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-section div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 200px;
+    background: white;
+    opacity: 0.7;
+    font-weight: 500;
+}
+/* hero section end */
