@@ -1,6 +1,10 @@
+const url = "http://matshel.dev/rainydays/wp-json/wc/store/products/" + id;
+const proxy = "https://noroffcors.herokuapp.com/";
+const corsFix = proxy + url;
+
 const detailContainer = document.querySelector(".jacket-container");
 const cart = document.querySelector(".cart-number");
-const corFix = "https://noroffcors.herokuapp.com/http://matshel.dev/rainydays/wp-json/wc/store/products" + id;
+const corFix = "https://noroffcors.herokuapp.com/";
 
 const queryString = document.location.search;
 
@@ -10,11 +14,11 @@ const id = params.get("id");
 
 console.log("id");
 
-const url = "http://matshel.dev/rainydays/wp-json/wc/store/products/" + id;
+
 
 async function getProducts() {
     try {
-        const response = await fetch(corFix);
+        const response = await fetch(corsFix);
         const getResults = await response.json();
         detailContainer.innerHTML = "";
         createHTML(getResults);
