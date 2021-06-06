@@ -27,6 +27,10 @@
     border-radius: 7px;
 }
 
+.checkout-container h2 {
+    margin-bottom: 10px;
+}
+
 #checkoutForm {
     margin: 0 auto;
     max-width: 670px;
