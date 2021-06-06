@@ -52,11 +52,12 @@ input {
     padding: 10px;
     font-size: 16px;
     margin-bottom: 10px;
+    outline: none;
 }
 
 .btn-checkout-form {
     text-transform: uppercase;
-    background: rgb(11, 91, 133);
+    background: #0a3641;
     border: none;
     width: 200px;
     padding: 1rem;
