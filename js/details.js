@@ -1,5 +1,6 @@
 const detailContainer = document.querySelector(".jacket-container");
 const cart = document.querySelector(".cart-number");
+const corFix = "https://noroffcors.herokuapp.com/http://matshel.dev/rainydays/wp-json/wc/store/products" + id;
 
 const queryString = document.location.search;
 
@@ -13,7 +14,7 @@ const url = "http://matshel.dev/rainydays/wp-json/wc/store/products/" + id;
 
 async function getProducts() {
     try {
-        const response = await fetch(url);
+        const response = await fetch(corFix);
         const getResults = await response.json();
         detailContainer.innerHTML = "";
         createHTML(getResults);
