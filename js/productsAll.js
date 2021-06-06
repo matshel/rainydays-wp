@@ -1,9 +1,10 @@
 const url = "http://matshel.dev/rainydays/wp-json/wc/store/products";
 const productsContainer = document.querySelector(".jacket-container");
+const corFix = "https://noroffcors.herokuapp.com/http://matshel.dev/rainydays/wp-json/wc/store/products";
 
 async function getProducts() {
     try {
-        const response = await fetch(url);
+        const response = await fetch(corFix);
         const getResults = await response.json();
         productsContainer.innerHTML = "";
         createHTML(getResults);
