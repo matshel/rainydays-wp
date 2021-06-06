@@ -2,28 +2,7 @@
     background-image: url("/images/banner_contact_us.jpg");
 }
 
-/* hero section */
-.hero-section {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    height: 100px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.hero-section div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 200px;
-    background: white;
-    opacity: 0.7;
-    font-weight: 500;
-}
-/* hero section end */
-
+/* checkout section */
 .checkout-success-section {
     display: flex;
     justify-content: center;
@@ -59,3 +38,4 @@
     background: orange;
     color: black;
 }
+/* checkout success end */
