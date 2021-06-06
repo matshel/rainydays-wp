@@ -2,7 +2,7 @@
 
 const detailContainer = document.querySelector(".jacket-container");
 const cart = document.querySelector(".cart-number");
-// const corFix = "https://noroffcors.herokuapp.com/";
+
 
 const queryString = document.location.search;
 
@@ -18,7 +18,7 @@ const corsFix = proxy + url;
 
 async function getProducts() {
     try {
-        const response = await fetch(url);
+        const response = await fetch(corsFix);
         const getResults = await response.json();
         detailContainer.innerHTML = "";
         createHTML(getResults);
