@@ -4,6 +4,9 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Rainydays Checkout page" />
+        <meta name="keywords" content="Checkout, Checkout Page, Rainydays Checkout" />
+        <meta name="author" content="Mats Helgesen" />
         <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
@@ -17,10 +20,10 @@
     <body>
         <header>
             <div class="statement-bar">
-                <p class="child1"><i class="fas fa-check-circle fa-lg"></i>FREE delivery on orders over $100</p>
-                <p class="child2"><i class="fas fa-check-circle fa-lg"></i>FREE returns</p>
-                <p class="child3"><i class="fas fa-check-circle fa-lg"></i>45 day money back guarantee</p>
-                <p class="child4"><i class="fas fa-check-circle fa-lg"></i>Satisfaction guarantee</p>
+                <p class="child1"><i class="fas fa-check-circle fa-lg" aria-label="Checkmark icon"></i>FREE delivery on orders over $100</p>
+                <p class="child2"><i class="fas fa-check-circle fa-lg" aria-label="Checkmark icon"></i>FREE returns</p>
+                <p class="child3"><i class="fas fa-check-circle fa-lg" aria-label="Checkmark icon"></i>45 day money back guarantee</p>
+                <p class="child4"><i class="fas fa-check-circle fa-lg" aria-label="Checkmark icon"></i>Satisfaction guarantee</p>
             </div>
             <nav>
                 <div class="nav-container">
@@ -37,7 +40,7 @@
                         <li><a href="about.html" aria-label="Go to about page">About</a></li>
                         <li><a href="contact.html" aria-label="Go to contact page">Contact</a></li>
                     </ul>
-                    <div class="cart"><img src="images/bx-shopping-bag.svg" alt="" /></div>
+                    <div class="cart"><img src="images/bx-shopping-bag.svg" alt="Icon of a shopping bag" /></div>
                     <a href="jacket-added.html" class="circle"><span class="cart-number">1</span></a>
 
                     <div class="burger">
@@ -54,37 +57,38 @@
         <div class="hero-section">
             <h1>Cart</h1>
         </div>
+        <!-- checkout section -->
         <div class="checkout-section">
             <div class="checkout-container">
                 <form id="checkoutForm">
                     <h2>Checkout</h2>
                     <div>
-                        <input name="fullName" id="fullName" placeholder="Full Name" />
+                        <input aria-label="Input fullName" name="fullName" id="fullName" placeholder="Full Name" />
                         <div class="form-error" id="fullNameError">Please enter your full name*</div>
                     </div>
                     <div>
-                        <input name="email" id="email" placeholder="Email" />
+                        <input aria-label="Input email" name="email" id="email" placeholder="Email" />
                         <div class="form-error" id="emailError">Please enter a valid email address*</div>
                     </div>
                     <div>
-                        <input name="address" id="address" placeholder="Address" />
+                        <input aria-label="Input Address" name="address" id="address" placeholder="Address" />
                         <div class="form-error" id="addressError">Please enter your address minimum 25 characters*</div>
                     </div>
                     <div>
-                        <input name="ccnumber" id="ccnumber" placeholder="0000111122223333" />
+                        <input aria-label="Input ccnumber" name="ccnumber" id="ccnumber" placeholder="0000111122223333" />
                         <div class="form-error" id="ccnumberError">Please enter your credit card number (16 numbers)*</div>
                     </div>
                     <div>
-                        <input name="cardholder" id="cardholder" placeholder="Card Holder" />
+                        <input aria-label="Input cardholder" name="cardholder" id="cardholder" placeholder="Card Holder" />
                         <div class="form-error" id="cardholderError">Please enter cardholder full name*</div>
                     </div>
                     <div class="date-cvc">
                         <div>
-                            <input name="date" id="date" placeholder="0121" />
+                            <input aria-label="Input date" name="date" id="date" placeholder="0121" />
                             <div class="form-error" id="dateError">Enter expiry date*</div>
                         </div>
                         <div>
-                            <input name="cvccode" id="cvccode" placeholder="123" />
+                            <input aria-label="Input cvccode" name="cvccode" id="cvccode" placeholder="123" />
                             <div class="form-error" id="cvcCodeError">Enter CVC (3 numbers)*</div>
                         </div>
                     </div>
@@ -92,6 +96,7 @@
                 </form>
             </div>
         </div>
+        <!-- checkout section end -->
         <!-- footer section -->
         <footer>
             <div class="footer-container">
